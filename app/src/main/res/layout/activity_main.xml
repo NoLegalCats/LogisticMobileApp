@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView_Free"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/ibm_plex_sans_bold"
+        android:text="@string/mainFree"
+        android:textColor="@color/blueApp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:thumbTint="@color/blueApp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_Free"
+        app:layout_constraintStart_toEndOf="@+id/textView_Free"
+        app:layout_constraintTop_toTopOf="@+id/textView_Free" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/ibm_plex_sans_bold"
+        android:text="@string/mainInWork"
+        android:textColor="@color/notActive"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_Free"
+        app:layout_constraintStart_toEndOf="@+id/switch1"
+        app:layout_constraintTop_toTopOf="@+id/textView_Free" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="-4dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch1"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/ibm_plex_sans_bold"
+                android:text="Уведомления"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="286dp"
+                        android:layout_height="132dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/rounded_notification"
+                        android:elevation="8dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="12dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                app:srcCompat="@mipmap/ic_launcher" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:fontFamily="@font/ibm_plex_sans_bold"
+                            android:text="Важное уведомление"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toEndOf="@+id/cardView"
+                            app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/ibm_plex_sans_semibold"
+                            android:text="2ч назад"
+                            android:textSize="10sp"
+                            app:layout_constraintStart_toEndOf="@+id/cardView"
+                            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                        <TextView
+                            android:id="@+id/editTextTextMultiLine"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="-8dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginBottom="2dp"
+                            android:ems="10"
+                            android:fontFamily="@font/ibm_plex_sans_bold"
+                            android:gravity="start|top"
+                            android:inputType="textMultiLine"
+                            android:minHeight="48dp"
+                            android:scrollbars="none"
+                            android:text="Дальнобойщик — просторечное название профессии водителей большегрузных автомобилей, перевозящих грузы на дальние расстояния. Так как водитель проводит много времени своей жизни за"
+                            android:textSize="8sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="286dp"
+                        android:layout_height="132dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/rounded_notification"
+                        android:elevation="8dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardViewDOP1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="12dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/imageViewDOP1"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                app:srcCompat="@mipmap/ic_launcher" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/textView5DOP1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:fontFamily="@font/ibm_plex_sans_bold"
+                            android:text="Важное уведомление"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toEndOf="@+id/cardViewDOP1"
+                            app:layout_constraintTop_toTopOf="@+id/cardViewDOP1" />
+
+                        <TextView
+                            android:id="@+id/textView6DOP1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/ibm_plex_sans_semibold"
+                            android:text="2ч назад"
+                            android:textSize="10sp"
+                            app:layout_constraintStart_toEndOf="@+id/cardViewDOP1"
+                            app:layout_constraintTop_toBottomOf="@+id/textView5DOP1" />
+
+                        <TextView
+                            android:id="@+id/editTextTextMultiLineDOP1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="-8dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginBottom="2dp"
+                            android:ems="10"
+                            android:fontFamily="@font/ibm_plex_sans_bold"
+                            android:gravity="start|top"
+                            android:inputType="textMultiLine"
+                            android:minHeight="48dp"
+                            android:scrollbars="none"
+                            android:text="Дальнобойщик — просторечное название профессии водителей большегрузных автомобилей, перевозящих грузы на дальние расстояния. Так как водитель проводит много времени своей жизни за"
+                            android:textSize="8sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cardViewDOP1" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="286dp"
+                        android:layout_height="132dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/rounded_notification"
+                        android:elevation="8dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardViewDOP2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="12dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/imageViewDOP2"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                app:srcCompat="@mipmap/ic_launcher" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/textView5DOP2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:fontFamily="@font/ibm_plex_sans_bold"
+                            android:text="Важное уведомление"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toEndOf="@+id/cardViewDOP2"
+                            app:layout_constraintTop_toTopOf="@+id/cardViewDOP2" />
+
+                        <TextView
+                            android:id="@+id/textView6DOP2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/ibm_plex_sans_semibold"
+                            android:text="2ч назад"
+                            android:textSize="10sp"
+                            app:layout_constraintStart_toEndOf="@+id/cardViewDOP2"
+                            app:layout_constraintTop_toBottomOf="@+id/textView5DOP2" />
+
+                        <TextView
+                            android:id="@+id/editTextTextMultiLineDOP2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="-8dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginBottom="2dp"
+                            android:ems="10"
+                            android:fontFamily="@font/ibm_plex_sans_bold"
+                            android:gravity="start|top"
+                            android:inputType="textMultiLine"
+                            android:scrollbars="none"
+                            android:text="Дальнобойщик — просторечное название профессии водителей большегрузных автомобилей, перевозящих грузы на дальние расстояния. Так как водитель проводит много времени своей жизни за"
+                            android:textSize="8sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cardViewDOP2" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/rounded_foreground">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/ibm_plex_sans_bold"
+                    android:text="Аналитика"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    app:cardBackgroundColor="@color/redApp"
+                    app:cardCornerRadius="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="8dp"
+                        app:srcCompat="@drawable/successful_flights" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/ibm_plex_sans_semibold"
+                    android:text="8"
+                    android:textColor="@color/redApp"
+                    app:layout_constraintStart_toEndOf="@+id/cardView2"
+                    app:layout_constraintTop_toTopOf="@+id/cardView2" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="86dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:fontFamily="@font/ibm_plex_sans_semibold"
+                    android:text="@string/successful_flights_text1"
+                    app:layout_constraintStart_toEndOf="@+id/textView9"
+                    app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="86dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/ibm_plex_sans_semibold"
+                    android:text="@string/successful_flights_text2"
+                    app:layout_constraintStart_toStartOf="@+id/textView9"
+                    app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView3"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:layout_marginEnd="108dp"
+                    app:cardBackgroundColor="@color/blueApp"
+                    app:cardCornerRadius="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/cardView2">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="8dp"
+                        app:srcCompat="@drawable/distance" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/ibm_plex_sans_semibold"
+                    android:text="70.152"
+                    android:textColor="@color/blueApp"
+                    app:layout_constraintStart_toEndOf="@+id/cardView3"
+                    app:layout_constraintTop_toTopOf="@+id/cardView3" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/ibm_plex_sans_semibold"
+                    android:text="@string/distance_text"
+                    app:layout_constraintStart_toEndOf="@+id/textView12"
+                    app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView4"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    app:cardBackgroundColor="@color/orangeApp"
+                    app:cardCornerRadius="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+                    <ImageView
+                        android:id="@+id/imageView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="8dp"
+                        app:srcCompat="@drawable/fuel" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/textView92"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/ibm_plex_sans_semibold"
+                    android:text="520$"
+                    android:textColor="@color/orangeApp"
+                    app:layout_constraintStart_toEndOf="@+id/cardView4"
+                    app:layout_constraintTop_toTopOf="@+id/cardView4" />
+
+                <TextView
+                    android:id="@+id/textView102"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:fontFamily="@font/ibm_plex_sans_semibold"
+                    android:text="@string/fuel_text"
+                    app:layout_constraintStart_toEndOf="@+id/textView92"
+                    app:layout_constraintTop_toTopOf="@+id/textView92" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView5"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:layout_marginEnd="108dp"
+                    app:cardBackgroundColor="@color/purpleApp"
+                    app:cardCornerRadius="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/cardView4">
+
+                    <ImageView
+                        android:id="@+id/imageView32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="8dp"
+                        app:srcCompat="@drawable/repair" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/textView93"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/ibm_plex_sans_semibold"
+                    android:text="600$"
+                    android:textColor="@color/purpleApp"
+                    app:layout_constraintStart_toEndOf="@+id/cardView5"
+                    app:layout_constraintTop_toTopOf="@+id/cardView5" />
+
+                <TextView
+                    android:id="@+id/textView103"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:fontFamily="@font/ibm_plex_sans_semibold"
+                    android:text="@string/repair_text1"
+                    app:layout_constraintStart_toEndOf="@+id/textView93"
+                    app:layout_constraintTop_toTopOf="@+id/textView93" />
+
+                <TextView
+                    android:id="@+id/textView113"
+                    android:layout_width="86dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/ibm_plex_sans_semibold"
+                    android:text="@string/repair_text2"
+                    app:layout_constraintStart_toStartOf="@+id/textView93"
+                    app:layout_constraintTop_toBottomOf="@+id/textView93" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView3"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/rounded_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/mainActivity"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginVertical="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/main_text"
+                android:scaleType="centerInside"
+                android:src="@drawable/main_sel" />
+
+            <ImageButton
+                android:id="@+id/chatActivity"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginVertical="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/chat_text"
+                android:scaleType="centerInside"
+                android:src="@drawable/mesenger" />
+
+            <ImageButton
+                android:id="@+id/mapActivity"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginVertical="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/map_text"
+                android:scaleType="centerInside"
+                android:src="@drawable/map" />
+
+            <ImageButton
+                android:id="@+id/ratingActivity"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginVertical="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/rating_text"
+                android:scaleType="fitCenter"
+                android:src="@drawable/rating" />
+
+            <ImageButton
+                android:id="@+id/profileActivity"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginVertical="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/profile_text"
+                android:scaleType="fitCenter"
+                android:src="@drawable/profile" />
+        </LinearLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

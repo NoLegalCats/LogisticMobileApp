@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/rounded_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/mainActivity"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginVertical="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/main_text"
+                android:scaleType="centerInside"
+                android:src="@drawable/main" />
+
+            <ImageButton
+                android:id="@+id/chatActivity"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginVertical="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/chat_text"
+                android:scaleType="centerInside"
+                android:src="@drawable/mesenger" />
+
+            <ImageButton
+                android:id="@+id/mapActivity"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginVertical="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/map_text"
+                android:scaleType="centerInside"
+                android:src="@drawable/map" />
+
+            <ImageButton
+                android:id="@+id/ratingActivity"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginVertical="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/rating_text"
+                android:scaleType="fitCenter"
+                android:src="@drawable/rating" />
+
+            <ImageButton
+                android:id="@+id/profileActivity"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginVertical="2dp"
+                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/profile_text"
+                android:scaleType="fitCenter"
+                android:src="@drawable/profile_sel" />
+        </LinearLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

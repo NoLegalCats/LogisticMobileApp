@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bgApp">#E7F3FC</color>
+    <color name="blueApp">#6083FF</color>
+    <color name="notActive">#D2D2D2</color>
+    <color name="status_bar_color">#FF5722</color>
+    <color name="subText">#A1A1A1</color>
+    <color name="redApp">#FF6060</color>
+    <color name="orangeApp">#FF9254</color>
+    <color name="purpleApp">#B454FF</color>
+    <color name="blackApp">#1E1E1E</color>
+    <color name="greyApp">#8C8C8C</color>
+</resources>

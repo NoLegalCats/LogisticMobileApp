@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Logistics App</string>
+    <string name="mainFree">Свободен</string>
+    <string name="mainInWork">В работе</string>
+    <string name="main_text">Основное</string>
+    <string name="chat_text">Чат</string>
+    <string name="map_text">Карты</string>
+    <string name="rating_text">Рейтинг</string>
+    <string name="profile_text">Профиль</string>
+    <string name="active_chat">Активный чат</string>
+    <string name="history_chat">История чатов</string>
+    <string name="text_chat">Текстовый чат</string>
+    <string name="successful_flights_text1">успешных</string>
+    <string name="successful_flights_text2">рейсов</string>
+    <string name="distance_text">км</string>
+    <string name="fuel_text">на топливо</string>
+    <string name="repair_text1">доп.</string>
+    <string name="repair_text2">Затраты</string>
+    <string name="mapMap_text">Карта</string>
+    <string name="maplist_text">Список</string>
+    <string name="load_date">Загрузка</string>
+    <string name="distant">Дистанция</string>
+</resources>
