@@ -7,6 +7,7 @@
     tools:context=".ProfileActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView5"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:background="@drawable/rounded_foreground"
@@ -80,5 +81,460 @@
                 android:src="@drawable/profile_sel" />
         </LinearLayout>
     </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <TextView
+        android:id="@+id/profile_hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/ibm_plex_sans_semibold"
+        android:text="@string/hello"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profile_userNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/ibm_plex_sans_bold"
+        android:text="Антон"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/profile_hello"
+        app:layout_constraintTop_toTopOf="@+id/profile_hello" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bottomNavigationView5"
+        app:layout_constraintTop_toBottomOf="@+id/profile_hello">
+
+        <TextView
+            android:id="@+id/profile_textView_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:fontFamily="@font/ibm_plex_sans_bold"
+            android:text="@string/mainFree"
+            android:textColor="@color/blueApp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Switch
+            android:id="@+id/profile_switch"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="2dp"
+            android:thumbTint="@color/blueApp"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_textView_free"
+            app:layout_constraintStart_toEndOf="@+id/profile_textView_free"
+            app:layout_constraintTop_toTopOf="@+id/profile_textView_free" />
+
+        <TextView
+            android:id="@+id/profile_textView_Working"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/ibm_plex_sans_bold"
+            android:text="@string/mainInWork"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_textView_free"
+            app:layout_constraintStart_toEndOf="@+id/profile_switch"
+            app:layout_constraintTop_toTopOf="@+id/profile_textView_free" />
+
+        <TextView
+            android:id="@+id/profile_ratingInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/ibm_plex_sans_semibold"
+            android:text="@string/rating"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile_textView_Working"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/profile_userRatingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/ibm_plex_sans_semibold"
+            android:text="4.500"
+            android:textColor="@color/blueApp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/profile_maxRatingInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:fontFamily="@font/ibm_plex_sans_semibold"
+            android:text="@string/max_rating"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/profile_userRatingText"
+            app:layout_constraintTop_toTopOf="@+id/profile_userRatingText" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="-28dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/profile_ratingInfo"
+            app:layout_constraintTop_toBottomOf="@+id/profile_ratingInfo"
+            app:srcCompat="@drawable/full_star" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintBottom_toTopOf="@+id/profile_logOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/spinner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/employee_open"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/rounded_option"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/employees_image"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginVertical="14dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/employees" />
+
+                    <TextView
+                        android:id="@+id/employees_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="14dp"
+                        android:layout_weight="100"
+                        android:fontFamily="@font/ibm_plex_sans_semibold"
+                        android:text="@string/employees"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/employees_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="18dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/changeData_open"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/rounded_option"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/edit_data_image"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginVertical="14dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/edit_data" />
+
+                    <TextView
+                        android:id="@+id/edit_data_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="14dp"
+                        android:layout_weight="100"
+                        android:fontFamily="@font/ibm_plex_sans_semibold"
+                        android:text="@string/edit_data"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/edit_data_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="18dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linkCard_open"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/rounded_option"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/link_card_image"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginVertical="14dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/link_card" />
+
+                    <TextView
+                        android:id="@+id/link_card_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="14dp"
+                        android:layout_weight="100"
+                        android:fontFamily="@font/ibm_plex_sans_semibold"
+                        android:text="@string/link_card"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/link_card_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="18dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/calendar_open"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/rounded_option"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/calendar_image"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginVertical="14dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/calendar" />
+
+                    <TextView
+                        android:id="@+id/calendar_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="14dp"
+                        android:layout_weight="100"
+                        android:fontFamily="@font/ibm_plex_sans_semibold"
+                        android:text="@string/calendar"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/calendar_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="18dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/historyOrders_open"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/rounded_option"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/history_orders_image"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginVertical="14dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/history_orders" />
+
+                    <TextView
+                        android:id="@+id/history_orders_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="14dp"
+                        android:layout_weight="100"
+                        android:fontFamily="@font/ibm_plex_sans_semibold"
+                        android:text="@string/history_orders"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/history_orders_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="18dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/analytics_open"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/rounded_option"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/analytics_image"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginVertical="14dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/analytics" />
+
+                    <TextView
+                        android:id="@+id/analytics_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="14dp"
+                        android:layout_weight="100"
+                        android:fontFamily="@font/ibm_plex_sans_semibold"
+                        android:text="@string/analytics"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/analytics_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="18dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/notifications_open"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/rounded_option"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/notifications_image"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginVertical="14dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/notifications" />
+
+                    <TextView
+                        android:id="@+id/notifications_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="14dp"
+                        android:layout_weight="100"
+                        android:fontFamily="@font/ibm_plex_sans_semibold"
+                        android:text="@string/notifications"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/notifications_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="18dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/arrow" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/profile_logOut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_cancel"
+        android:fontFamily="@font/ibm_plex_sans_semibold"
+        android:text="@string/exit"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

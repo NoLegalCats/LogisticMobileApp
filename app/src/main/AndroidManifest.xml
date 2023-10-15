@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,23 +16,67 @@
         android:theme="@style/Theme.LogisticsApp"
         tools:targetApi="31">
         <activity
-            android:name=".ProfileActivity"
+            android:name=".ChatIdActivity"
             android:exported="false" />
+        <activity
+            android:name=".RegCodeSmsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegPhoneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegDocumentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegTitleCompanyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegInnActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LogRegActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HistoryOrdersActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CalendarActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangeDataActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EmployeesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangingTractorDataActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".RatingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ActiveChatActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MapActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ChatActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

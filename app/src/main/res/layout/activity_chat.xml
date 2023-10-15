@@ -96,7 +96,7 @@
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <ScrollView
-        android:id="@+id/scrollView3"
+        android:id="@+id/mapMain_scrollView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -112,30 +112,33 @@
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/chat_idOpen"
                 android:layout_width="match_parent"
                 android:layout_height="72dp">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView"
+                    android:id="@+id/mapMain_Card"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="12dp"
-                    app:cardCornerRadius="100dp"
+                    app:cardCornerRadius="64px"
                     app:cardElevation="0dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
-                        android:id="@+id/imageView"
-                        android:layout_width="50dp"
+                        android:id="@+id/mapMain_image"
+                        android:layout_width="48dp"
                         android:layout_height="48dp"
-                        app:srcCompat="@mipmap/ic_launcher" />
+                        android:layout_marginHorizontal="-2dp"
+                        android:layout_marginVertical="-2dp"
+                        app:srcCompat="@android:drawable/sym_def_app_icon" />
 
                 </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/mapMain_nameUserText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
@@ -144,11 +147,11 @@
                     android:text="Александр"
                     android:textColor="@color/blueApp"
                     android:textSize="16sp"
-                    app:layout_constraintStart_toEndOf="@+id/cardView"
+                    app:layout_constraintStart_toEndOf="@+id/mapMain_Card"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/mapMain_textChatInfo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
@@ -156,11 +159,11 @@
                     android:fontFamily="@font/ibm_plex_sans"
                     android:text="@string/text_chat"
                     android:textColor="@color/subText"
-                    app:layout_constraintStart_toEndOf="@+id/cardView"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                    app:layout_constraintStart_toEndOf="@+id/mapMain_Card"
+                    app:layout_constraintTop_toBottomOf="@+id/mapMain_nameUserText" />
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/mapMain_timeText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
@@ -169,7 +172,7 @@
                     android:text="21:50"
                     android:textSize="12sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/textView2" />
+                    app:layout_constraintTop_toTopOf="@+id/mapMain_nameUserText" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
@@ -185,7 +188,7 @@
         android:background="@color/bgApp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
+        app:layout_constraintTop_toBottomOf="@+id/mapMain_scrollView" />
 
     <TextView
         android:id="@+id/textView_HistoryChat"
@@ -200,149 +203,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
-    <ScrollView
-        android:id="@+id/scrollView4"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcView_chat"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_HistoryChat">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:layout_marginVertical="4dp">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardViewHist"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="12dp"
-                    app:cardCornerRadius="100dp"
-                    app:cardElevation="0dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <ImageView
-                        android:id="@+id/imageViewHist"
-                        android:layout_width="50dp"
-                        android:layout_height="48dp"
-                        app:srcCompat="@mipmap/ic_launcher" />
-
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:id="@+id/textView2Hist"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="12dp"
-                    android:fontFamily="@font/ibm_plex_sans_semibold"
-                    android:text="Александр"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toEndOf="@+id/cardViewHist"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView4Hist"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/ibm_plex_sans"
-                    android:text="@string/text_chat"
-                    android:textColor="@color/subText"
-                    app:layout_constraintStart_toEndOf="@+id/cardViewHist"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2Hist" />
-
-                <TextView
-                    android:id="@+id/textView8Hist"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginEnd="18dp"
-                    android:fontFamily="@font/ibm_plex_sans_semibold"
-                    android:text="21:50"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/textView2Hist" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:layout_marginVertical="4dp">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardViewHist2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="12dp"
-                    app:cardCornerRadius="100dp"
-                    app:cardElevation="0dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <ImageView
-                        android:id="@+id/imageViewHist2"
-                        android:layout_width="50dp"
-                        android:layout_height="48dp"
-                        app:srcCompat="@mipmap/ic_launcher" />
-
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:id="@+id/textView2Hist2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="12dp"
-                    android:fontFamily="@font/ibm_plex_sans_semibold"
-                    android:text="Александр"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toEndOf="@+id/cardViewHist2"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView4Hist2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/ibm_plex_sans"
-                    android:text="@string/text_chat"
-                    android:textColor="@color/subText"
-                    app:layout_constraintStart_toEndOf="@+id/cardViewHist2"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2Hist2" />
-
-                <TextView
-                    android:id="@+id/textView8Hist2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginEnd="18dp"
-                    android:fontFamily="@font/ibm_plex_sans_semibold"
-                    android:text="21:50"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/textView2Hist2" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </LinearLayout>
-    </ScrollView>
+        app:layout_constraintTop_toBottomOf="@+id/textView_HistoryChat" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

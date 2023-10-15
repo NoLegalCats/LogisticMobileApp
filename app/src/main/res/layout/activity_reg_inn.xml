@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegInnActivity">
+
+    <TextView
+        android:id="@+id/regInn_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/registration"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ibm_plex_sans_bold"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/regInn_stepText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Шаг 1/5"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ibm_plex_sans"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regInn_title" />
+
+    <TextView
+        android:id="@+id/regInn_enterInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/ibm_plex_sans_bold"
+        android:text="@string/enter_inn"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regInn_stepText" />
+
+    <TextView
+        android:id="@+id/regInn_sunInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/pls_enter_data"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ibm_plex_sans"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regInn_enterInfo" />
+
+    <EditText
+        android:id="@+id/regInn_innEditText"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:paddingLeft="24dp"
+        android:background="@drawable/rounded_background"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regInn_sunInfo"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/regInn_nextButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/ibm_plex_sans_semibold"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regInn_innEditText" />
+
+    <TextView
+        android:id="@+id/regInn_subLoginInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/alreadyReg"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ibm_plex_sans_semibold"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/regInn_innEditText"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="@+id/regInn_innEditText"
+        app:layout_constraintTop_toBottomOf="@+id/regInn_innEditText" />
+
+    <TextView
+        android:id="@+id/regInn_loginClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/login"
+        android:textColor="@color/blueApp"
+        android:fontFamily="@font/ibm_plex_sans_bold"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/regInn_subLoginInfo"
+        app:layout_constraintStart_toEndOf="@+id/regInn_subLoginInfo"
+        app:layout_constraintTop_toTopOf="@+id/regInn_subLoginInfo" />
+
+    <LinearLayout
+        android:id="@+id/regInn_linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-16dp"
+        android:layout_marginEnd="-16dp"
+        android:paddingLeft="12dp"
+        android:background="@color/employees"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/regInn_enterInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regInn_stepText">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="32dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="64px">
+
+            <Button
+                android:id="@+id/regInn_forwarderButton"
+                android:layout_width="200dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:background="@color/subText"
+                android:fontFamily="@font/ibm_plex_sans_bold"
+                android:text="@string/forwarder"
+                android:textColor="@color/white"
+                tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="64px">
+
+            <Button
+                android:id="@+id/regInn_сargoOwnerButton"
+                android:layout_width="200dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:paddingRight="20dp"
+                android:background="@color/blueApp"
+                android:fontFamily="@font/ibm_plex_sans_bold"
+                android:text="@string/сargo_owner"
+                android:textColor="@color/white"
+                tools:ignore="TouchTargetSizeCheck" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

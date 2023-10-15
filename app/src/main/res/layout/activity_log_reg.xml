@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogRegActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logReg_cardImage"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="32px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logReg_Image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/common_google_signin_btn_icon_light_normal" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/logReg_linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="-16dp"
+        android:background="@color/employees"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logReg_cardImage">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="32dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="64px">
+
+            <Button
+                android:id="@+id/logReg_driverButton"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:background="@color/subText"
+                android:fontFamily="@font/ibm_plex_sans_bold"
+                android:text="@string/driver"
+                android:textColor="@color/white"
+                tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="64px">
+
+            <Button
+                android:id="@+id/logReg_clientButton"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:background="@color/blueApp"
+                android:fontFamily="@font/ibm_plex_sans_bold"
+                android:text="@string/client"
+                android:textColor="@color/white"
+                tools:ignore="TouchTargetSizeCheck" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/logReg_buttonReg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/ibm_plex_sans_semibold"
+        android:text="@string/registration"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logReg_linearLayout" />
+
+    <Button
+        android:id="@+id/logReg_buttonLog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_notification"
+        android:text="@string/login"
+        android:textColor="@color/blueApp"
+        android:fontFamily="@font/ibm_plex_sans_semibold"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logReg_buttonReg" />
+
+    <TextView
+        android:id="@+id/logReg_confidInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/ibm_plex_sans"
+        android:text="@string/confid"
+        android:textColor="@color/blueApp"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

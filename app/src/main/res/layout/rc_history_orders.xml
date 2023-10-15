@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/historyOrders_upLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/notActive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/historyOrders_startPointText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/ibm_plex_sans_bold"
+        android:text="Kostanay, KZ"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/historyOrders_upLine" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/historyOrders_startPoint"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="12dp"
+        app:cardBackgroundColor="@color/notActive"
+        app:cardCornerRadius="64px"
+        app:layout_constraintBottom_toBottomOf="@+id/historyOrders_startPointText"
+        app:layout_constraintStart_toEndOf="@+id/historyOrders_startPointText"
+        app:layout_constraintTop_toTopOf="@+id/historyOrders_startPointText" />
+
+    <ImageView
+        android:id="@+id/historyOrders_dotLine"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/historyOrders_startPoint"
+        app:layout_constraintEnd_toStartOf="@+id/historyOrders_endPoint"
+        app:layout_constraintStart_toEndOf="@+id/historyOrders_startPoint"
+        app:layout_constraintTop_toTopOf="@+id/historyOrders_startPoint"
+        app:srcCompat="@drawable/hor_dotted_line" />
+
+    <ImageView
+        android:id="@+id/historyOrders_endPoint"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="56dp"
+        app:layout_constraintBottom_toBottomOf="@+id/historyOrders_startPoint"
+        app:layout_constraintStart_toEndOf="@+id/historyOrders_startPoint"
+        app:layout_constraintTop_toTopOf="@+id/historyOrders_startPoint"
+        app:srcCompat="@drawable/ok" />
+
+    <TextView
+        android:id="@+id/historyOrders_endPointText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/ibm_plex_sans_bold"
+        android:text="Berlin, Germany"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/historyOrders_endPoint"
+        app:layout_constraintTop_toTopOf="@+id/historyOrders_startPointText" />
+
+    <TextView
+        android:id="@+id/historyOrders_dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/ibm_plex_sans_semibold"
+        android:text="11 сентября"
+        android:textColor="@color/greyApp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/historyOrders_startPointText"
+        app:layout_constraintTop_toBottomOf="@+id/historyOrders_startPointText" />
+
+    <TextView
+        android:id="@+id/historyOrders_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="18dp"
+        android:fontFamily="@font/ibm_plex_sans_bold"
+        android:text="1500$"
+        android:textColor="@color/blueApp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/historyOrders_dateText"
+        app:layout_constraintTop_toBottomOf="@+id/historyOrders_dateText" />
+
+    <RatingBar
+        android:id="@+id/historyOrders_ratingBar"
+        style="@style/CustomRatingBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="16dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="4"
+        android:stepSize="1.0"
+        app:layout_constraintBottom_toBottomOf="@+id/historyOrders_cost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toEndOf="@+id/historyOrders_cost" />
+
+    <View
+        android:id="@+id/historyOrders_downLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/notActive"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

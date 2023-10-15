@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView_Free"
+        android:id="@+id/main_textView_free"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
@@ -20,18 +20,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/main_switch"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="2dp"
         android:thumbTint="@color/blueApp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_Free"
-        app:layout_constraintStart_toEndOf="@+id/textView_Free"
-        app:layout_constraintTop_toTopOf="@+id/textView_Free" />
+        app:layout_constraintBottom_toBottomOf="@+id/main_textView_free"
+        app:layout_constraintStart_toEndOf="@+id/main_textView_free"
+        app:layout_constraintTop_toTopOf="@+id/main_textView_free" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/main_textView_Working"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -39,22 +39,104 @@
         android:text="@string/mainInWork"
         android:textColor="@color/notActive"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_Free"
-        app:layout_constraintStart_toEndOf="@+id/switch1"
-        app:layout_constraintTop_toTopOf="@+id/textView_Free" />
+        app:layout_constraintBottom_toBottomOf="@+id/main_textView_free"
+        app:layout_constraintStart_toEndOf="@+id/main_switch"
+        app:layout_constraintTop_toTopOf="@+id/main_textView_free" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        app:cardCornerRadius="24px"
+        app:cardElevation="24px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toEndOf="@+id/main_textView_Working"
+        app:layout_constraintTop_toTopOf="@+id/main_textView_Working">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/main_flagText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp"
+                android:text="🇰🇿"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/main_regText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/ibm_plex_sans_bold"
+                android:text="KZ"
+                android:textColor="@color/black"
+                android:textSize="6sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/main_flagText"
+                app:layout_constraintStart_toStartOf="@+id/main_flagText"
+                app:layout_constraintTop_toBottomOf="@+id/main_flagText" />
+
+            <TextView
+                android:id="@+id/main_numberCarText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="-2dp"
+                android:fontFamily="@font/ibm_plex_sans_semibold"
+                android:text="310 ВКМ"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/main_regText"
+                app:layout_constraintStart_toEndOf="@+id/main_flagText"
+                app:layout_constraintTop_toTopOf="@+id/main_flagText" />
+
+            <View
+                android:id="@+id/main_line"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/main_numberCarText"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/main_subNumberCarText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/ibm_plex_sans_semibold"
+                android:text="01"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/main_line"
+                app:layout_constraintTop_toTopOf="@+id/main_numberCarText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
     <ScrollView
-        android:id="@+id/scrollView2"
+        android:id="@+id/main_scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="32dp"
-        android:layout_marginBottom="-4dp"
+        android:layout_marginBottom="4dp"
         android:background="@drawable/rounded_background"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch1"
+        app:layout_constraintTop_toBottomOf="@+id/main_switch"
         app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
@@ -63,270 +145,77 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/main_notificationInfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
                 android:layout_marginTop="24dp"
                 android:fontFamily="@font/ibm_plex_sans_bold"
                 android:text="Уведомления"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <HorizontalScrollView
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcView_notification"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp">
+                android:layout_marginTop="12dp" />
 
-                <LinearLayout
+            <LinearLayout
+                android:id="@+id/changeDataTractor_go"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_option"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/main_changeImage"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginVertical="14dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="20"
+                    app:srcCompat="@drawable/change" />
+
+                <TextView
+                    android:id="@+id/main_changeTextInfo"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="286dp"
-                        android:layout_height="132dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginTop="6dp"
-                        android:layout_marginBottom="12dp"
-                        android:background="@drawable/rounded_notification"
-                        android:elevation="8dp">
-
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/cardView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginTop="12dp"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="0dp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
-
-                            <ImageView
-                                android:id="@+id/imageView"
-                                android:layout_width="48dp"
-                                android:layout_height="48dp"
-                                app:srcCompat="@mipmap/ic_launcher" />
-
-                        </androidx.cardview.widget.CardView>
-
-                        <TextView
-                            android:id="@+id/textView5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:fontFamily="@font/ibm_plex_sans_bold"
-                            android:text="Важное уведомление"
-                            android:textSize="16sp"
-                            app:layout_constraintStart_toEndOf="@+id/cardView"
-                            app:layout_constraintTop_toTopOf="@+id/cardView" />
-
-                        <TextView
-                            android:id="@+id/textView6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginTop="6dp"
-                            android:fontFamily="@font/ibm_plex_sans_semibold"
-                            android:text="2ч назад"
-                            android:textSize="10sp"
-                            app:layout_constraintStart_toEndOf="@+id/cardView"
-                            app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-                        <TextView
-                            android:id="@+id/editTextTextMultiLine"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginTop="-8dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginBottom="2dp"
-                            android:ems="10"
-                            android:fontFamily="@font/ibm_plex_sans_bold"
-                            android:gravity="start|top"
-                            android:inputType="textMultiLine"
-                            android:minHeight="48dp"
-                            android:scrollbars="none"
-                            android:text="Дальнобойщик — просторечное название профессии водителей большегрузных автомобилей, перевозящих грузы на дальние расстояния. Так как водитель проводит много времени своей жизни за"
-                            android:textSize="8sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/cardView" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="286dp"
-                        android:layout_height="132dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginTop="6dp"
-                        android:layout_marginBottom="12dp"
-                        android:background="@drawable/rounded_notification"
-                        android:elevation="8dp">
-
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/cardViewDOP1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginTop="12dp"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="0dp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
-
-                            <ImageView
-                                android:id="@+id/imageViewDOP1"
-                                android:layout_width="48dp"
-                                android:layout_height="48dp"
-                                app:srcCompat="@mipmap/ic_launcher" />
-
-                        </androidx.cardview.widget.CardView>
-
-                        <TextView
-                            android:id="@+id/textView5DOP1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:fontFamily="@font/ibm_plex_sans_bold"
-                            android:text="Важное уведомление"
-                            android:textSize="16sp"
-                            app:layout_constraintStart_toEndOf="@+id/cardViewDOP1"
-                            app:layout_constraintTop_toTopOf="@+id/cardViewDOP1" />
-
-                        <TextView
-                            android:id="@+id/textView6DOP1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginTop="6dp"
-                            android:fontFamily="@font/ibm_plex_sans_semibold"
-                            android:text="2ч назад"
-                            android:textSize="10sp"
-                            app:layout_constraintStart_toEndOf="@+id/cardViewDOP1"
-                            app:layout_constraintTop_toBottomOf="@+id/textView5DOP1" />
-
-                        <TextView
-                            android:id="@+id/editTextTextMultiLineDOP1"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginTop="-8dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginBottom="2dp"
-                            android:ems="10"
-                            android:fontFamily="@font/ibm_plex_sans_bold"
-                            android:gravity="start|top"
-                            android:inputType="textMultiLine"
-                            android:minHeight="48dp"
-                            android:scrollbars="none"
-                            android:text="Дальнобойщик — просторечное название профессии водителей большегрузных автомобилей, перевозящих грузы на дальние расстояния. Так как водитель проводит много времени своей жизни за"
-                            android:textSize="8sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/cardViewDOP1" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="286dp"
-                        android:layout_height="132dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginTop="6dp"
-                        android:layout_marginBottom="12dp"
-                        android:background="@drawable/rounded_notification"
-                        android:elevation="8dp">
-
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/cardViewDOP2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginTop="12dp"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="0dp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
-
-                            <ImageView
-                                android:id="@+id/imageViewDOP2"
-                                android:layout_width="48dp"
-                                android:layout_height="48dp"
-                                app:srcCompat="@mipmap/ic_launcher" />
-
-                        </androidx.cardview.widget.CardView>
-
-                        <TextView
-                            android:id="@+id/textView5DOP2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:fontFamily="@font/ibm_plex_sans_bold"
-                            android:text="Важное уведомление"
-                            android:textSize="16sp"
-                            app:layout_constraintStart_toEndOf="@+id/cardViewDOP2"
-                            app:layout_constraintTop_toTopOf="@+id/cardViewDOP2" />
-
-                        <TextView
-                            android:id="@+id/textView6DOP2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginTop="6dp"
-                            android:fontFamily="@font/ibm_plex_sans_semibold"
-                            android:text="2ч назад"
-                            android:textSize="10sp"
-                            app:layout_constraintStart_toEndOf="@+id/cardViewDOP2"
-                            app:layout_constraintTop_toBottomOf="@+id/textView5DOP2" />
-
-                        <TextView
-                            android:id="@+id/editTextTextMultiLineDOP2"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:layout_marginTop="-8dp"
-                            android:layout_marginEnd="12dp"
-                            android:layout_marginBottom="2dp"
-                            android:ems="10"
-                            android:fontFamily="@font/ibm_plex_sans_bold"
-                            android:gravity="start|top"
-                            android:inputType="textMultiLine"
-                            android:scrollbars="none"
-                            android:text="Дальнобойщик — просторечное название профессии водителей большегрузных автомобилей, перевозящих грузы на дальние расстояния. Так как водитель проводит много времени своей жизни за"
-                            android:textSize="8sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/cardViewDOP2" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </LinearLayout>
-            </HorizontalScrollView>
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginVertical="14dp"
+                    android:layout_weight="80"
+                    android:fontFamily="@font/ibm_plex_sans_semibold"
+                    android:text="@string/change_dataTractor"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/rounded_foreground">
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/main_analiticInfo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="12dp"
                     android:fontFamily="@font/ibm_plex_sans_bold"
                     android:text="Аналитика"
+                    android:textColor="@color/black"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView2"
+                    android:id="@+id/main_flightCard"
                     android:layout_width="52dp"
                     android:layout_height="52dp"
                     android:layout_marginStart="16dp"
@@ -334,10 +223,10 @@
                     app:cardBackgroundColor="@color/redApp"
                     app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView7">
+                    app:layout_constraintTop_toBottomOf="@+id/main_analiticInfo">
 
                     <ImageView
-                        android:id="@+id/imageView2"
+                        android:id="@+id/main_flightImage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="8dp"
@@ -346,7 +235,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/main_flightText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
@@ -354,41 +243,43 @@
                     android:fontFamily="@font/ibm_plex_sans_semibold"
                     android:text="8"
                     android:textColor="@color/redApp"
-                    app:layout_constraintStart_toEndOf="@+id/cardView2"
-                    app:layout_constraintTop_toTopOf="@+id/cardView2" />
+                    app:layout_constraintStart_toEndOf="@+id/main_flightCard"
+                    app:layout_constraintTop_toTopOf="@+id/main_flightCard" />
 
                 <TextView
-                    android:id="@+id/textView10"
+                    android:id="@+id/main_flightTextInfo1"
                     android:layout_width="86dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="2dp"
                     android:fontFamily="@font/ibm_plex_sans_semibold"
                     android:text="@string/successful_flights_text1"
-                    app:layout_constraintStart_toEndOf="@+id/textView9"
-                    app:layout_constraintTop_toTopOf="@+id/textView9" />
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@+id/main_flightText"
+                    app:layout_constraintTop_toTopOf="@+id/main_flightText" />
 
                 <TextView
-                    android:id="@+id/textView11"
+                    android:id="@+id/main_flightTextInfo2"
                     android:layout_width="86dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:fontFamily="@font/ibm_plex_sans_semibold"
                     android:text="@string/successful_flights_text2"
-                    app:layout_constraintStart_toStartOf="@+id/textView9"
-                    app:layout_constraintTop_toBottomOf="@+id/textView9" />
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@+id/main_flightText"
+                    app:layout_constraintTop_toBottomOf="@+id/main_flightText" />
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView3"
+                    android:id="@+id/main_distanceCard"
                     android:layout_width="52dp"
                     android:layout_height="52dp"
                     android:layout_marginEnd="108dp"
                     app:cardBackgroundColor="@color/blueApp"
                     app:cardCornerRadius="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/cardView2">
+                    app:layout_constraintTop_toTopOf="@+id/main_flightCard">
 
                     <ImageView
-                        android:id="@+id/imageView3"
+                        android:id="@+id/main_distanceImage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="8dp"
@@ -397,7 +288,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/textView12"
+                    android:id="@+id/main_distanceText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
@@ -405,21 +296,22 @@
                     android:fontFamily="@font/ibm_plex_sans_semibold"
                     android:text="70.152"
                     android:textColor="@color/blueApp"
-                    app:layout_constraintStart_toEndOf="@+id/cardView3"
-                    app:layout_constraintTop_toTopOf="@+id/cardView3" />
+                    app:layout_constraintStart_toEndOf="@+id/main_distanceCard"
+                    app:layout_constraintTop_toTopOf="@+id/main_distanceCard" />
 
                 <TextView
-                    android:id="@+id/textView13"
+                    android:id="@+id/main_distanceTextInfo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:fontFamily="@font/ibm_plex_sans_semibold"
                     android:text="@string/distance_text"
-                    app:layout_constraintStart_toEndOf="@+id/textView12"
-                    app:layout_constraintTop_toTopOf="@+id/textView12" />
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@+id/main_distanceText"
+                    app:layout_constraintTop_toTopOf="@+id/main_distanceText" />
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView4"
+                    android:id="@+id/main_fuelCard"
                     android:layout_width="52dp"
                     android:layout_height="52dp"
                     android:layout_marginStart="16dp"
@@ -427,10 +319,10 @@
                     app:cardBackgroundColor="@color/orangeApp"
                     app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cardView2">
+                    app:layout_constraintTop_toBottomOf="@+id/main_flightCard">
 
                     <ImageView
-                        android:id="@+id/imageView22"
+                        android:id="@+id/main_fuelimage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="8dp"
@@ -439,7 +331,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/textView92"
+                    android:id="@+id/main_fuelText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
@@ -447,31 +339,32 @@
                     android:fontFamily="@font/ibm_plex_sans_semibold"
                     android:text="520$"
                     android:textColor="@color/orangeApp"
-                    app:layout_constraintStart_toEndOf="@+id/cardView4"
-                    app:layout_constraintTop_toTopOf="@+id/cardView4" />
+                    app:layout_constraintStart_toEndOf="@+id/main_fuelCard"
+                    app:layout_constraintTop_toTopOf="@+id/main_fuelCard" />
 
                 <TextView
-                    android:id="@+id/textView102"
+                    android:id="@+id/main_fuelTextInfo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="2dp"
                     android:fontFamily="@font/ibm_plex_sans_semibold"
                     android:text="@string/fuel_text"
-                    app:layout_constraintStart_toEndOf="@+id/textView92"
-                    app:layout_constraintTop_toTopOf="@+id/textView92" />
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@+id/main_fuelText"
+                    app:layout_constraintTop_toTopOf="@+id/main_fuelText" />
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView5"
+                    android:id="@+id/main_repairCard"
                     android:layout_width="52dp"
                     android:layout_height="52dp"
                     android:layout_marginEnd="108dp"
                     app:cardBackgroundColor="@color/purpleApp"
                     app:cardCornerRadius="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/cardView4">
+                    app:layout_constraintTop_toTopOf="@+id/main_fuelCard">
 
                     <ImageView
-                        android:id="@+id/imageView32"
+                        android:id="@+id/main_repairImage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="8dp"
@@ -480,7 +373,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/textView93"
+                    android:id="@+id/main_repairText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
@@ -488,32 +381,46 @@
                     android:fontFamily="@font/ibm_plex_sans_semibold"
                     android:text="600$"
                     android:textColor="@color/purpleApp"
-                    app:layout_constraintStart_toEndOf="@+id/cardView5"
-                    app:layout_constraintTop_toTopOf="@+id/cardView5" />
+                    app:layout_constraintStart_toEndOf="@+id/main_repairCard"
+                    app:layout_constraintTop_toTopOf="@+id/main_repairCard" />
 
                 <TextView
-                    android:id="@+id/textView103"
+                    android:id="@+id/main_repairTextInfo1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="2dp"
                     android:fontFamily="@font/ibm_plex_sans_semibold"
                     android:text="@string/repair_text1"
-                    app:layout_constraintStart_toEndOf="@+id/textView93"
-                    app:layout_constraintTop_toTopOf="@+id/textView93" />
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@+id/main_repairText"
+                    app:layout_constraintTop_toTopOf="@+id/main_repairText" />
 
                 <TextView
-                    android:id="@+id/textView113"
+                    android:id="@+id/main_repairTextInfo2"
                     android:layout_width="86dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:fontFamily="@font/ibm_plex_sans_semibold"
                     android:text="@string/repair_text2"
-                    app:layout_constraintStart_toStartOf="@+id/textView93"
-                    app:layout_constraintTop_toBottomOf="@+id/textView93" />
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@+id/main_repairText"
+                    app:layout_constraintTop_toBottomOf="@+id/main_repairText" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_foreground">
 
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
 

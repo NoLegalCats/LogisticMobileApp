@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/month_1"
+        android:title="1 месяц" />
+    <item
+        android:id="@+id/month_3"
+        android:title="3 месяца" />
+    <item
+        android:id="@+id/month_6"
+        android:title="6 месяцев" />
+    <item
+        android:id="@+id/year_1"
+        android:title="1 год" />
+    <item
+        android:id="@+id/all_time"
+        android:title="За всё время" />
+</menu>

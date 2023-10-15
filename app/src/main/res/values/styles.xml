@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomRatingBarStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:numStars">5</item> <!-- Количество звезд -->
+        <item name="android:rating">0</item> <!-- Начальный рейтинг -->
+        <item name="android:stepSize">1.0</item> <!-- Шаг изменения рейтинга -->
+        <item name="android:layout_gravity">center</item> <!-- Выравнивание по центру -->
+        <item name="android:progressDrawable">@drawable/custom_rating_bar</item>
+        <item name="android:minHeight">24dp</item> <!-- Минимальная высота звезд -->
+        <item name="android:minWidth">24dp</item> <!-- Минимальная ширина звезд -->
+    </style>
+</resources>

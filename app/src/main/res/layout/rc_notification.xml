@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="286dp"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/rounded_notification"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mapMain_Card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/notific_Image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/notific_TitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/ibm_plex_sans_bold"
+        android:text="Важное уведомление"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/mapMain_Card"
+        app:layout_constraintTop_toTopOf="@+id/mapMain_Card" />
+
+    <TextView
+        android:id="@+id/notific_TimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/ibm_plex_sans_semibold"
+        android:text="2ч назад"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/mapMain_Card"
+        app:layout_constraintTop_toBottomOf="@+id/notific_TitleText" />
+
+    <TextView
+        android:id="@+id/notific_DescrText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:fontFamily="@font/ibm_plex_sans_bold"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:scrollbars="none"
+        android:text="Дальнобойщик — просторечное название профессии водителей большегрузных автомобилей, перевозящих грузы на дальние расстояния. Так как водитель проводит много времени своей жизни за"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapMain_Card" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

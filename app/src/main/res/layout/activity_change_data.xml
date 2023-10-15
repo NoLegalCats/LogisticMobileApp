@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChangeDataActivity">
+
+    <ImageButton
+        android:id="@+id/changeData_backButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/exit"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/go_back"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/changeData_titleInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/changeData"
+        android:fontFamily="@font/ibm_plex_sans_bold"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/changeData_backButton"
+        app:layout_constraintStart_toEndOf="@+id/changeData_backButton"
+        app:layout_constraintTop_toTopOf="@+id/changeData_backButton" />
+
+    <EditText
+        android:id="@+id/changeData_editInnText"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_write"
+        android:ems="10"
+        android:fontFamily="@font/ibm_plex_sans"
+        android:hint="@string/inn"
+        android:inputType="number"
+        android:paddingHorizontal="12dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changeData_backButton" />
+
+    <EditText
+        android:id="@+id/changeData_NameSerText"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_write"
+        android:ems="10"
+        android:fontFamily="@font/ibm_plex_sans"
+        android:hint="@string/name_sur"
+        android:inputType="text"
+        android:paddingHorizontal="12dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changeData_editInnText" />
+
+    <ImageView
+        android:id="@+id/changeData_imageNameSur"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/changeData_NameSerText"
+        app:layout_constraintEnd_toEndOf="@+id/changeData_NameSerText"
+        app:layout_constraintTop_toTopOf="@+id/changeData_NameSerText"
+        app:srcCompat="@drawable/edit_data" />
+
+    <TextView
+        android:id="@+id/changeData_dateNameSur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/ibm_plex_sans"
+        android:text="Последный раз 12.08.2021"
+        android:textColor="@color/greyApp"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/changeData_NameSerText"
+        app:layout_constraintTop_toBottomOf="@+id/changeData_NameSerText" />
+
+    <EditText
+        android:id="@+id/changeData_requisites"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_write"
+        android:ems="10"
+        android:fontFamily="@font/ibm_plex_sans"
+        android:hint="@string/requisites"
+        android:inputType="number"
+        android:paddingHorizontal="12dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changeData_dateNameSur" />
+
+    <ImageView
+        android:id="@+id/changeData_imageRequisites"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/changeData_requisites"
+        app:layout_constraintEnd_toEndOf="@+id/changeData_requisites"
+        app:layout_constraintTop_toTopOf="@+id/changeData_requisites"
+        app:srcCompat="@drawable/edit_data" />
+
+    <TextView
+        android:id="@+id/changeData_dateRequisites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/ibm_plex_sans"
+        android:text="Последный раз 12.08.2021"
+        android:textColor="@color/greyApp"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/changeData_requisites"
+        app:layout_constraintTop_toBottomOf="@+id/changeData_requisites" />
+
+    <Button
+        android:id="@+id/changeData_lookData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/ibm_plex_sans_semibold"
+        android:text="@string/lookData"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

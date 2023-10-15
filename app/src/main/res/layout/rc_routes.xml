@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/route_ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="24dp"
+    android:layout_marginVertical="8dp"
+    android:background="@drawable/rounded_background">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/route_startPoint"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:elevation="0dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/route_startLocText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="-6dp"
+        android:fontFamily="@font/ibm_plex_sans_semibold"
+        android:text="Kostanay, KZ"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/route_startPoint"
+        app:layout_constraintTop_toTopOf="@+id/route_startPoint" />
+
+    <ImageView
+        android:id="@+id/route_dotLine"
+        android:layout_width="16dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/route_endPoint"
+        app:layout_constraintStart_toStartOf="@+id/route_startPoint"
+        app:layout_constraintTop_toBottomOf="@+id/route_startPoint"
+        app:srcCompat="@drawable/dotted_line" />
+
+    <ImageView
+        android:id="@+id/route_endPoint"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="42dp"
+        app:layout_constraintStart_toStartOf="@+id/route_startPoint"
+        app:layout_constraintTop_toBottomOf="@+id/route_startPoint"
+        app:srcCompat="@drawable/ok" />
+
+    <TextView
+        android:id="@+id/route_endLocText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="-12dp"
+        android:fontFamily="@font/ibm_plex_sans_semibold"
+        android:text="Berlin, Germany"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/route_endPoint"
+        app:layout_constraintTop_toTopOf="@+id/route_endPoint" />
+
+    <TextView
+        android:id="@+id/route_endLocDescText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/ibm_plex_sans"
+        android:text="20/86/задн., бок., верх./ + 16"
+        android:textColor="@color/greyApp"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/route_endPoint"
+        app:layout_constraintTop_toBottomOf="@+id/route_endLocText" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-4dp"
+        android:layout_marginEnd="24dp"
+        android:elevation="0dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/route_startPoint">
+
+        <TextView
+            android:id="@+id/route_massText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginVertical="2dp"
+            android:fontFamily="@font/ibm_plex_sans"
+            android:text="36.000 кг"
+            android:textColor="@color/redApp"
+            android:textSize="10sp" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/route_loadInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/ibm_plex_sans_semibold"
+        android:text="@string/load_date"
+        android:textColor="@color/greyApp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/route_endLocDescText" />
+
+    <TextView
+        android:id="@+id/route_loadText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/ibm_plex_sans_semibold"
+        android:text="11 сентября"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/route_loadInfo"
+        app:layout_constraintTop_toBottomOf="@+id/route_loadInfo" />
+
+    <TextView
+        android:id="@+id/route_distantInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/ibm_plex_sans_semibold"
+        android:text="@string/distant"
+        android:textColor="@color/greyApp"
+        app:layout_constraintStart_toEndOf="@+id/route_loadInfo"
+        app:layout_constraintTop_toBottomOf="@+id/route_endLocDescText" />
+
+    <TextView
+        android:id="@+id/route_distantText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/ibm_plex_sans_semibold"
+        android:text="1200 км"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/route_distantInfo"
+        app:layout_constraintTop_toBottomOf="@+id/route_distantInfo" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="0dp"
+        app:cardBackgroundColor="@color/blueApp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/route_distantInfo">
+
+        <TextView
+            android:id="@+id/route_costText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginVertical="4dp"
+            android:fontFamily="@font/ibm_plex_sans_semibold"
+            android:text="1500$"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/route_SubConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="2dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/route_loadText">
+
+        <TextView
+            android:id="@+id/route_descrInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/ibm_plex_sans_semibold"
+            android:text="@string/description"
+            android:textColor="@color/blueApp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/route_descrText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/ibm_plex_sans_semibold"
+            android:text="Необходимо перевезти 36т металлических бочек для того-то, чтобы сделать то-то, это будет стоить столько-то, по цене можем договориться"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/route_descrInfo" />
+
+        <TextView
+            android:id="@+id/route_faceInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/ibm_plex_sans_semibold"
+            android:text="@string/face"
+            android:textColor="@color/blueApp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/route_descrText" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/route_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="64px"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/route_faceInfo">
+
+            <ImageView
+                android:id="@+id/route_imageUser"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="-2dp"
+                android:layout_marginVertical="-2dp"
+                app:srcCompat="@mipmap/ic_launcher" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/route_userNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="-4dp"
+            android:fontFamily="@font/ibm_plex_sans_semibold"
+            android:text="Александр"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/route_card"
+            app:layout_constraintTop_toTopOf="@+id/route_card" />
+
+        <TextView
+            android:id="@+id/route_userLocText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/ibm_plex_sans_semibold"
+            android:text="Kostanay, KZ"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/route_card"
+            app:layout_constraintTop_toBottomOf="@+id/route_userNameText" />
+
+        <TextView
+            android:id="@+id/route_userRegText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/ibm_plex_sans"
+            android:text="Зарегистрирован 4 года назад"
+            android:textColor="@color/black"
+            android:textSize="8sp"
+            app:layout_constraintStart_toEndOf="@+id/route_card"
+            app:layout_constraintTop_toBottomOf="@+id/route_userLocText" />
+
+        <Button
+            android:id="@+id/route_buttonRequest"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="@font/ibm_plex_sans_bold"
+            android:text="@string/make_request"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/route_userRegText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

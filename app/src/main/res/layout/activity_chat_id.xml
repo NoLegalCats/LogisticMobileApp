@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatIdActivity">
+
+    <ImageButton
+        android:id="@+id/chatId_backButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/exit"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/go_back"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/chatId_typeChatText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/ibm_plex_sans_semibold"
+        android:text="@string/activeChat"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/chatId_backButton"
+        app:layout_constraintStart_toEndOf="@+id/chatId_backButton"
+        app:layout_constraintTop_toTopOf="@+id/chatId_backButton" />
+
+    <TextView
+        android:id="@+id/chatId_nameUserText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/ibm_plex_sans_bold"
+        android:text="Александром"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/chatId_typeChatText"
+        app:layout_constraintStart_toEndOf="@+id/chatId_typeChatText"
+        app:layout_constraintTop_toTopOf="@+id/chatId_typeChatText" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/ibm_plex_sans"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp"
+        android:text="Это стальные конструкции, в основном стальные балки и стержни. Нам нужно доставить их с нашего завода в городе Костанай в город Берлин. Это довольно крупные и тяжелые элементы."
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatId_backButton" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_chat"
+        android:fontFamily="@font/ibm_plex_sans"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp"
+        android:text="Это стальные конструкции, в основном стальные балки и стержни. Нам нужно доставить их с нашего завода в городе Костанай в город Берлин. Это довольно крупные и тяжелые элементы."
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingVertical="16dp"
+        android:paddingRight="96dp"
+        android:fontFamily="@font/ibm_plex_sans"
+        android:background="@drawable/rounded_background"
+        android:ems="10"
+        android:textSize="16sp"
+        android:text="Это стальные конструкции, в основном стальные балки и стержни. Нам нужно доставить их с нашего завода в городе Костанай в город Берлин. Это довольно крупные и тяжелые элементы."
+        android:hint="@string/hint_chat"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextText"
+        app:layout_constraintEnd_toEndOf="@+id/editTextText"
+        app:layout_constraintTop_toTopOf="@+id/editTextText"
+        app:srcCompat="@drawable/send"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextText"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="@+id/editTextText"
+        app:srcCompat="@drawable/attach"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="8dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="72dp"
+        android:paddingVertical="8dp"
+        android:background="@drawable/rounded_button"
+        android:textColor="@color/white"
+        android:text="@string/on_position"
+        android:fontFamily="@font/ibm_plex_sans_semibold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="38dp"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintTop_toTopOf="@+id/button"
+        app:srcCompat="@drawable/on_position" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

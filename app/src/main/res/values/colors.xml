@@ -8,8 +8,13 @@
     <color name="status_bar_color">#FF5722</color>
     <color name="subText">#A1A1A1</color>
     <color name="redApp">#FF6060</color>
+    <color name="greenApp">#73E53D</color>
     <color name="orangeApp">#FF9254</color>
     <color name="purpleApp">#B454FF</color>
     <color name="blackApp">#1E1E1E</color>
     <color name="greyApp">#8C8C8C</color>
+    <color name="ratingDescr">#3D3D3D</color>
+    <color name="employees">#F8F8F8</color>
+    <color name="expense">#D3B3F5</color>
+    <color name="income">#6AEAD2</color>
 </resources>
